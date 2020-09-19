@@ -22,7 +22,7 @@ func GetFileSizeByRead() (fs int) {
 }
 
 func GetFileSizeByIoutilReadFile() (fs int64) {
-	file,err:=os.Open("abc.txt")
+	file,err := os.Open("abc.txt")
 
 	if err == nil {
 		fi, _ := file.Stat()
@@ -32,7 +32,7 @@ func GetFileSizeByIoutilReadFile() (fs int64) {
 }
 
 func GetFileSizeByOsStat() (fs int64) {
-	fi,err := os.Stat("abc.txt")
+	fi, err := os.Stat("abc.txt")
 	if err == nil {
 		fs = fi.Size()
 	}
